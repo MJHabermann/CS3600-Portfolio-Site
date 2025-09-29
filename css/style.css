@@ -381,3 +381,237 @@ nav ul li a::after {
 .portfolio-item:hover {
   transform: scale(1.1);
 }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.08); /* slight transparency */
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 5;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cookie-modal {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.cookie-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.close-cookie {
+float: right;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+.close-cookie:hover {
+  color: #F7627A;
+}
+.accept-cookie {
+  background: #F7627A;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.accept-cookie:hover {
+  background: #D772D6;
+}
+.signin-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ff9c83, #F7627A);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.signup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ff9c83, #F7627A);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.signin-container input, .signup-container input {
+  text-align: right;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+.signin-container .btn {
+  position: relative;
+  z-index: 2;
+  left: 35%;
+  background: white;
+  color: #F7627A;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 30%;
+}
+.signup-container .btn{
+  position: relative;
+  z-index: 2;
+  left: 35%;
+  background: white;
+  color: #F7627A;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 30%;
+}
+.signup-container .btn:hover {
+  background: #F7627A;
+  color: white;
+}
+.contact-section {
+  position: absolute;
+  top: 20%;
+  width: 50%;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact-card {
+  position: absolute;
+  top: 50%;
+  width: 500px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ff9c83, #F7627A);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.contact-card input {
+  text-align: right;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+.contact-section iframe {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.contact-card .btn {
+  position: relative;
+  z-index: 2;
+  left: 0%;
+  background: white;
+  color: #F7627A;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: 30%;
+}
+.privacypolicy-modal {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.privacypolicy-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.close-privacypolicy {
+float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-privacypolicy:hover {
+  color: #F7627A;
+}
+
+
+.termsconditions-modal {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.termsconditions-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.close-termsconditions {
+float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-termsconditions:hover {
+  color: #F7627A;
+}

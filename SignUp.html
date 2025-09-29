@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,24 +24,27 @@
                 });
             });
     </script>
-    <section class="hero">
-        <div class="profile">
-            <div class="circle-bg"></div>
-            <img src="images/profile.png" alt="Profile picture">
-            <a href="#" class="cv-btn">Download CV ⏬</a>
-        </div>
-        <div class="card uiux">▶️ UI/UX</div>
-        <div class="card hi">👋 Hi there!</div>
-        <div class="card illustrations">🎨 Illustrations</div>
-        <div class="card work">📬 Work with me</div>
-    </section>
-    
-    <div class="bottom-arc"></div>
-    <div class="linearring1"></div>
-    <div class="linearring2"></div>
-    <div class="linearring3"></div>
-    <div class="linearring4"></div>
-    <div class="linearring5"></div>
+        <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="/submit_signup" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Sign Up" class="btn">
+        </form>
+
+    </div>
+
     <div class="triangle triangle1"></div>
     <div class="triangle triangle2"></div>
     <div class="triangle triangle3"></div>
@@ -54,13 +57,5 @@
     <div class="triangle triangle10"></div>
     <div class="triangle triangle11"></div>
     <div class="triangle triangle12"></div>
-        <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML('beforeend', data);
-            });
-    </script>
 </body>
-
 </html>

@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script defer src="cookie.js"></script>
+<script defer src="privacy.js"></script>
+<script defer src="terms.js"></script>  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Cart</a></li>
-            </ul>
-            <a href="#" class="btn">Contact Me</a>
-        </nav>
-    </header>
+<script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+                const links = document.querySelectorAll('nav a');
+                links.forEach(link => {
+                    if (link.href === window.location.href) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+    </script>
     <section class="about-section">
         <img src="images/profile.jpg" class="about-img" alt="About Image">
         <div class="profile-card">
@@ -53,5 +52,12 @@
     <div class="triangle triangle10"></div>
     <div class="triangle triangle11"></div>
     <div class="triangle triangle12"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
 </body>
 </html>
